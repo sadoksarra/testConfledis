@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4 text-center probootstrap-animate">
+      <div class="probootstrap-heading dark">
+        <h1 class="primary-heading">La liste des produits </h1>
+      </div>
+    </div>
+</div>
+
+<div class="input-group md-form form-sm form-2 pl-0">
+    <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search"
+    [(ngModel)]="searchedKeyword">
+    <div class="input-group-append">
+      <span class="input-group-text amber lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
+          aria-hidden="true"></i></span>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <!-- No data message -->
+  <p *ngIf="Produit.length <= 0" class="no-data text-center">There is no produit added yet!</p>
+
+  <!-- Employee list -->
+  <table class="table table-bordered" *ngIf="Produit.length > 0">
+    <thead class="table-success">
+      <tr>
+        <th scope="col">Produit ID</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prix unitaire</th>
+        <th scope="col">Quantité</th>
+        
+        <th scope="col center">Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produit of Produit | filter:searchedKeyword ; let i = index">
+        <th scope="row">{{produit._id}}</th>
+        <td>{{produit.nom}}</td>
+        <td>{{produit.prix_unitaire}}</td>
+        <td>{{produit.quantite}}</td>
+       
+        <td class="text-center edit-block">
+          <span class="edit" [routerLink]="['/edit-produit/', produit._id]">
+            <button type="button" class="btn btn-success btn-sm">Edit</button>
+          </span>
+          <span class="delete" (click)="removeProduit(produit, i)">
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+   
+      

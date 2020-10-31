@@ -1,0 +1,45 @@
+
+  section.probootstrap-section {
+    background: #E4E4E4;
+    color: #8b8e94;
+    line-height: 24px;
+    font-size: 15px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+.probootstrap-heading .primary-heading {
+  margin-top: 17px;
+  margin-bottom: 10px;
+}
+.table-success, .table-success>td, .table-success>th {
+  background-color: #8b8e94;
+}
+.table-bordered {
+  font-size: 14px;
+}
+.btn-success {
+  
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.btn-danger{
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.input-group-append {
+ 
+  display: none;
+}
+.input-group {
+  margin-bottom: 12px;
+}
+
+.input-group.md-form.form-sm.form-2 input.amber-border {
+  border: 2px solid #FFA33E;
+  width: 100%;
+    margin-left: 122px;
+    margin-right: 122px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}

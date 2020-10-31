@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4 text-center probootstrap-animate">
+      <div class="probootstrap-heading dark">
+        <h1 class="primary-heading">Créer Produit</h1>
+      </div>
+    </div>
+</div>
+      <section class="probootstrap-section probootstrap-bg-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 probootstrap-animate">
+              <form [formGroup]="produitForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="inputName">Nom</label>
+                      <input class="form-control" type="text" formControlName="nom" placeholder="Nom de produit">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="inputVerify3">Prix unitaire</label>
+                      <input class="form-control" type="text" formControlName="prix_unitaire" placeholder="Prix">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="inputVerify3">Quantité</label>
+                      <input class="form-control" type="text" formControlName="quantite" placeholder="Quantité">
+                    </div>
+                  </div>
+                </div>
+                <!-- END row -->
+                
+                 
+                  
+                
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-4">
+                    <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-lg btn-primary btn-block">
+                  </div>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    
